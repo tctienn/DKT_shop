@@ -1,0 +1,77 @@
+.header {
+    width: 100%;
+    aspect-ratio: 20/2;
+    border: solid 1px black;
+    background-image: url('../dkt_shop/bai\ ket\ thuc\ mon\ web/9bc27292880429.5e569ff84e4d0.gif');
+}
+
+.logo {
+    width: 8%;
+    aspect-ratio: 2/2;
+
+    background-image: url('../dkt_shop/bai ket thuc mon web/LOGO/dk2.gif');
+    background-size: 100%;
+    position: relative;
+    left: 0.75%;
+    top: 10px;
+    float: left;
+
+}
+
+.header_right {
+    float: right;
+    height: 100%;
+    width: 70%;
+}
+
+.DD {
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+.DD>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.DD>ul>li {
+    color: white;
+    size: 40px;
+    float: left;
+    margin-right: 20px;
+}
+
+.DD>ul>li:hover {
+    color: #13ffff;
+}
+
+.search {
+    float: left;
+    position: relative;
+    top: 49%;
+    left: 15%;
+}
+
+.search_input {
+    width: 122px;
+    border-radius: 10px;
+    transition: width 2s;
+    background: #d0d3ff;
+}
+
+.search_input:hover {
+    width: 265px;
+    border-radius: 10px;
+    /* transform: matrix(1000); */
+    background-color: white;
+
+}
+
+.search_input_affter {
+    width: 265px;
+    border-radius: 10px;
+    background-color: white;
+}
