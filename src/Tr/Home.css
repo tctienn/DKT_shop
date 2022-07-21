@@ -65,3 +65,15 @@
     border: solid 1px white;
     aspect-ratio: 2/2;
 }
+
+.img_product {
+    width: 100%;
+    height: 100%;
+}
+
+.name_item {
+    width: 100%;
+    aspect-ratio: 10/2;
+    color: white;
+    font-size: 11px;
+}

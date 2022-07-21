@@ -52,7 +52,13 @@ export default function Home() {
                     data?.map((e, i) => (
                         <div className='item'>
                             <div className='img_item'>
-                                <img src={require(e.image)} />
+                                <img id='i' className='img_product' src={(e.image)} />
+                            </div>
+                            <div className='name_item'>
+                                <p>{e.name}</p>
+                            </div>
+                            <div className='gia'>
+                                <p>{e.gia}</p>
                             </div>
                         </div>
                     ))
