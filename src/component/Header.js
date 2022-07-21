@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './Header.css'
+import { Icon } from '@iconify/react';
+import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 // ion-icon
 export default function Header() {
@@ -24,26 +27,46 @@ export default function Header() {
         //console.log(elee);
 
     }
+    // const [count, setCount] = useState(0)
+    const count_products = useSelector(store => store.count_store.product)
+    const change_scroll = () => {
+        // console.log(window.scrollY)
+        if (window.scrollY > 90) {
+            setLogo(false)
+        }
+        else
+            setLogo(true)
+        // alert(scro_test)
+    }
+    window.addEventListener('scroll', change_scroll)
+    const [logo, setLogo] = useState(true)
     return (
-        <div className='header'>
+        <div className={logo ? 'header' : 'header2'}>
+
             <div className='logo'></div>
             <div className='header_right'>
                 <div className='search'>
                     <input id='search' onChange={onChangeSearch} className='search_input' type={'search'} />
+                    <span className="iconify" data-icon="bi:search"></span>
                 </div>
 
-                {console.log(state_search)}
+
                 <div className='DD'>
                     <ul>
                         <li>TRANG CHỦ</li>
                         <li>ĐĂN NHẬP</li>
-                        <li>GIỎ HÀNG</li>
+                        <li>
+                            <Link to={'/cart'}>
+                                <span className="iconify" data-icon="fa6-solid:cart-flatbed" ></span>
+                                <div className='count_cart'>{count_products.length}</div>
+                            </Link>
+                        </li>
                         <li>DANH SÁCH ƯỚC</li>
 
                     </ul>
 
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

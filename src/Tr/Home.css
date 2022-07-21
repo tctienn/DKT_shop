@@ -3,7 +3,8 @@
     width: 80%;
     aspect-ratio: 67/14;
     margin: auto;
-    margin-top: 10px;
+
+    margin-top: 153px;
 }
 
 .QQ1 {
@@ -33,12 +34,15 @@
 
 .body_home {
     background: #000023;
+    margin-top: -13px;
+
 }
 
 .mid_home {
+
     background-color: #000018;
     width: 80%;
-    aspect-ratio: 7/14;
+    aspect-ratio: 15/16;
     margin: auto;
     margin-top: 40px;
 
@@ -53,22 +57,41 @@
 }
 
 .item {
-    border: solid 1px white;
+    border: solid 1px rgb(92, 92, 92);
     width: 18%;
     aspect-ratio: 8/12;
     float: left;
-    margin: 10px 10px 10px 11px;
+    margin: 10px 9px 10px 11px;
+    cursor: pointer;
+}
+
+.item:hover {
+    border: solid 1px white;
 }
 
 .img_item {
     width: 100%;
-    border: solid 1px white;
     aspect-ratio: 2/2;
+    overflow: hidden;
+}
+
+.item:hover .img_product {
+    /* width: 110%;
+    height: 110%; */
+    transform: scale(1.2, 1.2);
+    /* transition-property: width, height; */
+    /* transition-duration: all 2s; */
+
 }
 
 .img_product {
     width: 100%;
     height: 100%;
+    transition: transform 2s;
+}
+
+.name_item_p {
+    width: 90%;
 }
 
 .name_item {
@@ -76,4 +99,197 @@
     aspect-ratio: 10/2;
     color: white;
     font-size: 11px;
+    padding-left: 10px;
+}
+
+.name_item:hover {
+    color: rgb(85, 198, 198);
+}
+
+.gia {
+    margin-left: 10px;
+    color: white;
+    width: 70%;
+    float: left;
+
+}
+
+.text_gia {
+    margin-top: 0;
+}
+
+
+.iconify {
+    color: rgb(255, 255, 255);
+}
+
+#iconifyy {
+
+    float: right;
+    text-align: center;
+    width: 25px;
+    aspect-ratio: 2/2;
+    margin-right: 11px;
+}
+
+#iconifyy:hover {
+    border-radius: 10px;
+    border: solid 1px white;
+}
+
+.page_number {
+    color: white;
+    width: 70%;
+    height: 20px;
+    clear: left;
+    margin: auto;
+
+}
+
+#page_number {
+    float: left;
+    margin: 10px;
+    background-color: #393939;
+    width: 20px;
+    aspect-ratio: 2/2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#page_number:hover {
+    background-color: rgb(133, 225, 195);
+    color: rgb(255, 45, 182);
+
+}
+
+.color {
+    color: white;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    margin-top: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* .header:hover {
+    opacity: 0.4;
+    aspect-ratio: 23/2;
+    transition-property: opacity, aspect-ratio;
+    transition-duration: 4s, 2s;
+
+} */
+
+
+a {
+    display: block;
+    color: white;
+}
+
+.p2 {
+    width: 80%;
+    margin: auto;
+    background-color: rgb(0, 14, 29);
+    aspect-ratio: 4/2;
+    border: solid 1px white;
+}
+
+.poster {
+    width: 32%;
+    aspect-ratio: 11/6;
+    border: solid 1px white;
+    float: left;
+    margin: 10px 0 0 10px;
+    background-image: url('../dkt_shop/bai ket thuc mon web/quangcao/qq\ \(1\).jpg');
+    background-size: 100% 100%;
+    border-radius: 10px 0 0 0;
+}
+
+.poster2 {
+    width: 32%;
+    aspect-ratio: 11/6;
+    border: solid 1px white;
+    float: left;
+    margin: 10px 0 0 10px;
+    background-image: url('../dkt_shop/bai ket thuc mon web/quangcao/qq\ \(1\).png');
+    background-size: 100% 100%;
+}
+
+.poster3 {
+    width: 32%;
+    aspect-ratio: 11/6;
+    border: solid 1px white;
+    float: left;
+    margin: 10px 0 0 10px;
+    background-image: url('../dkt_shop/bai ket thuc mon web/quangcao/qq\ \(2\).png');
+    background-size: 100% 100%;
+    border-radius: 0 10px 0 0;
+}
+
+.poster4 {
+    width: 20%;
+    aspect-ratio: 7/10;
+    border: solid 1px white;
+    float: left;
+    margin: 10px 0 0 10px;
+    background-image: url('../dkt_shop/bai ket thuc mon web/quangcao/qql\ \(1\).png');
+    background-size: 100% 100%;
+    border-radius: 0 0 0 10px;
+}
+
+.poster5 {
+    float: left;
+    width: 76%;
+    margin: 0.9% 0 0 2%;
+    aspect-ratio: 37/14;
+    background-image: url('../dkt_shop/bai ket thuc mon web/quangcao/qql1.gif');
+    background-size: 100% 100%;
+    border-radius: 0 0 10px;
+
+}
+
+.on_poster5 {
+    border-radius: 10px;
+    background-color: white;
+    width: 20%;
+    aspect-ratio: 10/2;
+    position: relative;
+    top: 58%;
+    left: 4%;
+    opacity: 0.7;
+    text-align: center;
+    line-height: 31px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.text_poster5 {
+
+    color: white;
+    position: relative;
+    top: 58%;
+    left: 4%;
+    font-size: 10px;
+}
+
+.text2_poster5 {
+    position: relative;
+    opacity: 0;
+    left: 67%;
+    top: 13%;
+    font-size: 16.5px;
+    width: 163px;
+}
+
+.text2_poster5:hover {
+    opacity: 1;
+    position: relative;
+    color: white;
+    left: 67%;
+    top: 13%;
+    font-size: 16.5px;
+    background-color: black;
+
+
 }

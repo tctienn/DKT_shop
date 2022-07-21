@@ -1,0 +1,61 @@
+/* .body_cart {
+    margin-top: 10.18%;
+    background-color: #01011b;
+    height: 546px;
+    width: 100%;
+}
+
+div,
+h3,
+p,
+button {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right {
+    width: 32%;
+    aspect-ratio: 19/19;
+    float: right;
+    border: solid 2px #ff12fc;
+
+}
+
+.tex {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.thanhtoan {
+    color: black;
+    margin-left: 40%;
+
+}
+
+.item {
+    width: 60%;
+    aspect-ratio: 38/7;
+}
+
+.img_item {
+    width: 20%;
+    aspect-ratio: 2/2;
+    border: solid 1px white;
+    float: left;
+}
+
+.describe {
+    float: left;
+}
+
+.Quantity {
+    display: flex;
+}
+
+.input_Quantity {
+    width: 15px;
+    text-align: center;
+    aspect-ratio: 2/2;
+} */
