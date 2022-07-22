@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Header.css'
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // ion-icon
 export default function Header() {
@@ -12,6 +12,7 @@ export default function Header() {
         //ele.classList.add('.search_input_affter');
         //this.removeClass('search_input').addClass('search_input_affter');
         // this.addClass('search_input_affter');
+        setTextSearch(ele.target.value)
         if (ele.target.value == '') {
             ele.target.classList.remove('search_input_affter')
 
@@ -40,14 +41,23 @@ export default function Header() {
     }
     window.addEventListener('scroll', change_scroll)
     const [logo, setLogo] = useState(true)
+
+    //search
+    const [textSearch, setTextSearch] = useState()
+    const navigate = useNavigate()
+    const onclickSearch = () => {
+
+        navigate(`?name=${textSearch}`)
+    }
     return (
         <div className={logo ? 'header' : 'header2'}>
 
-            <div className='logo'></div>
+            <div className='logo' ></div>
             <div className='header_right'>
                 <div className='search'>
+                    <div type='button' onClick={onclickSearch}><span className="iconify buttonSearch" data-icon="bi:search" ></span></div>
                     <input id='search' onChange={onChangeSearch} className='search_input' type={'search'} />
-                    <span className="iconify" data-icon="bi:search"></span>
+
                 </div>
 
 
@@ -56,7 +66,7 @@ export default function Header() {
                         <li>TRANG CHỦ</li>
                         <li>ĐĂN NHẬP</li>
                         <li>
-                            <Link to={'/cart'}>
+                            <Link to={'/cart'} >
                                 <span className="iconify" data-icon="fa6-solid:cart-flatbed" ></span>
                                 <div className='count_cart'>{count_products.length}</div>
                             </Link>

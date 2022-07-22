@@ -57,6 +57,8 @@
     position: relative;
     top: 49%;
     left: 15%;
+    display: flex;
+    align-items: center;
 }
 
 .search_input {
@@ -109,9 +111,16 @@
 
     /* position: fixed;
     top: 0; */
-    opacity: 0.2;
+    opacity: 0.5;
     aspect-ratio: 23/2;
     transition-property: opacity, aspect-ratio;
     transition-duration: 4s, 2s;
 
+}
+
+.buttonSearch:hover {
+    /* background-color: rgb(0, 255, 255); */
+    color: rgb(0, 255, 255);
+    /* border-radius: 10px; */
+    /* display: none; */
 }

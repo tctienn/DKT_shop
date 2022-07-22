@@ -8,6 +8,7 @@ import { getFakeProducts, getProducts } from '../services/api'
 import { Icon } from '@iconify/react';
 import { useSelector, useDispatch } from 'react-redux'
 import { add } from '../Reductool/ProductSlide'
+import { useNavigate } from 'react-router-dom'
 // import a from '../dkt_shop/bai ket thuc mon web/products/sanpham.jpg'
 export default function Home() {
     const [slidee, setSlidee] = useState(adsslide);
@@ -28,22 +29,20 @@ export default function Home() {
     const [data, setData] = useState([])
 
     useEffect(() => {
+        console.log(window.location.href)
         const getAllProducts = async () => {
             //const data = await getFakeProducts();
             // const products = await getFakeProducts();
-            const products = await getProducts();
+            var url = new URL(window.location.href);
+            var productName = url.searchParams.get("name");
+            const products = await getProducts({ name: productName });
 
             //console.log('result', result);
-            setData(products);
-            setRend(products.slice(0, 15))
-        };
-
-
-
-        getAllProducts();
-
-
-    }, []);
+            setData(products.data);
+            setRend(products.data.slice(0, 15))
+        }
+        getAllProducts()
+    }, [window.location.href]);
     // const [number, setNumber] = useState([])
     var ayda = []
     const asd = () => {
@@ -66,7 +65,10 @@ export default function Home() {
     const count_product = useSelector(store => store.count_store.product)
     const count_item = (item) => () => {
         //alert(item)
+        if (window.confirm('bạn muốn thêm sản phẩm này vào giỏ hàng của mình không ?') == false)
+            return
         dispatch(add(item))
+
         // alert(count_product.length)
 
     }
@@ -77,10 +79,8 @@ export default function Home() {
 
     // alert(uivl)
     const number_page = (i) => () => {
-
         index = i * 15
         setRend(data.slice(index, index + 15))
-
     }
     const change_scroll = () => {
         console.log(window.scrollY)
@@ -91,8 +91,15 @@ export default function Home() {
     }
     window.addEventListener('scroll', change_scroll)
     const [logo, setLogo] = useState(0)
+
+    /////////////////
+    const sa = useNavigate()
+    const vl = () => {
+        sa(`?name=ip`)
+    }
     return (
         <div className='body_home'  >
+
 
             <Header logo={logo} />
 
@@ -105,7 +112,8 @@ export default function Home() {
                 </div>
             </div>
             <div className='mid_home' id='body_home'>
-                <div className='loc' ></div>
+                <div className='loc' id='loc' ></div>
+
                 {
                     rend?.map((e, i) => (
                         <div key={i} className='item'>
@@ -129,7 +137,7 @@ export default function Home() {
                 <div className='color'>
 
                     {ayda.map((e, i) => (
-                        <a href='#body_home'><div key={i} id='page_number' onClick={number_page(i)}>{i}</div></a>
+                        <a key={i} href='#loc'><div id='page_number' onClick={number_page(i)}>{i}</div></a>
                     ))}
 
                 </div>
