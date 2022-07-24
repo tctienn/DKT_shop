@@ -2,10 +2,10 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: 'https://62b6e8c76999cce2e809fa1e.mockapi.io/dkt',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  },
+  // headers: {
+  //   Accept: 'application/json',
+  //   'Content-Type': 'application/json',
+  // },
   timeout: 30000,
 });
 
